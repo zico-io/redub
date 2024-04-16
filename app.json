@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Reeltility",
-    "slug": "reeltility",
-    "scheme": "reeltility",
+    "name": "redub",
+    "slug": "redub",
+    "scheme": "redub",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
