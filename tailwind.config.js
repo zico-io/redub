@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#252422',
+        primary: '#000',
         secondary: {
           DEFAULT: '#FFFCF2',
           100: '#CCC5B9',
@@ -16,20 +16,19 @@ module.exports = {
           200: "#232533",
         },
         gray: {
-          100: "#CDCDE0",
+          100: "#1D1F1F",
         },
-        action: '#EB5E28'
+        action: '#FFADFF'
       },
       fontFamily: {
-        fthin: ["FiraSans-Thin", "sans-serif"],
-        fextralight: ["FiraSans-ExtraLight", "sans-serif"],
-        flight: ["FiraSans-Light", "sans-serif"],
-        fregular: ["FiraSans-Regular", "sans-serif"],
-        fmedium: ["FiraSans-Medium", "sans-serif"],
-        fsemibold: ["FiraSans-SemiBold", "sans-serif"],
-        fbold: ["FiraSans-Bold", "sans-serif"],
-        fextrabold: ["FiraSans-ExtraBold", "sans-serif"],
-        fblack: ["FiraSans-Black", "sans-serif"],
+        sfthin: ["SF-Pro-Display-Thin", "sans-serif"],
+        sfultralight: ["SF-Pro-Display-Ultralight", "sans-serif"],
+        sflight: ["SF-Pro-Display-Light", "sans-serif"],
+        sfregular: ["SF-Pro-Display-Regular", "sans-serif"],
+        sfmedium: ["SF-Pro-Display-Medium", "sans-serif"],
+        sfsemibold: ["SF-Pro-Display-Semibold", "sans-serif"],
+        sfbold: ["SF-Pro-Display-Bold", "sans-serif"],
+        sfblack: ["SF-Pro-Display-Black", "sans-serif"],
       },
     },
   },

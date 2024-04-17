@@ -7,15 +7,14 @@ SplashScreen.preventAutoHideAsync();
 
 const rootLayout = () => {
   const [fontsLoaded, error] = useFonts({
-    "FiraSans-Black": require("../assets/fonts/FiraSans-Black.ttf"),
-    "FiraSans-Bold": require("../assets/fonts/FiraSans-Bold.ttf"),
-    "FiraSans-ExtraBold": require("../assets/fonts/FiraSans-ExtraBold.ttf"),
-    "FiraSans-ExtraLight": require("../assets/fonts/FiraSans-ExtraLight.ttf"),
-    "FiraSans-Light": require("../assets/fonts/FiraSans-Light.ttf"),
-    "FiraSans-Medium": require("../assets/fonts/FiraSans-Medium.ttf"),
-    "FiraSans-Regular": require("../assets/fonts/FiraSans-Regular.ttf"),
-    "FiraSans-SemiBold": require("../assets/fonts/FiraSans-SemiBold.ttf"),
-    "FiraSans-Thin": require("../assets/fonts/FiraSans-Thin.ttf"),
+    "SF-Pro-Display-Black": require("../assets/fonts/SF-Pro-Display-Black.otf"),
+    "SF-Pro-Display-Bold": require("../assets/fonts/SF-Pro-Display-Bold.otf"),
+    "SF-Pro-Display-UltraLight": require("../assets/fonts/SF-Pro-Display-Ultralight.otf"),
+    "SF-Pro-Display-Light": require("../assets/fonts/SF-Pro-Display-Light.otf"),
+    "SF-Pro-Display-Medium": require("../assets/fonts/SF-Pro-Display-Medium.otf"),
+    "SF-Pro-Display-Regular": require("../assets/fonts/SF-Pro-Display-Regular.otf"),
+    "SF-Pro-Display-Semibold": require("../assets/fonts/SF-Pro-Display-Semibold.otf"),
+    "SF-Pro-Display-Thin": require("../assets/fonts/SF-Pro-Display-Thin.otf"),
   });
   
   useEffect(() => {
