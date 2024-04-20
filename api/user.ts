@@ -4,24 +4,32 @@ const api_endpoint: string = 'https://redub.zico.xyz'
 
 export const createUser = async (form: object, setIsSubmitting: React.Dispatch<SetStateAction<boolean>>) => {
     setIsSubmitting(true)
-    const response = await fetch(`${api_endpoint}/api/users`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(form)
-    })
+    try {
+        const response = await fetch(`${api_endpoint}/api/users`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(form)
+        })
+    }catch(e){
+        throw new Error(e)
+    }
     setIsSubmitting(false)
 }
 
 export const login = async (form: object, setIsSubmitting: React.Dispatch<SetStateAction<boolean>>) => {
     setIsSubmitting(true)
-    const response = await fetch(`${api_endpoint}/api/users/login?`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(form)
-    })
+    try {
+        const response = await fetch(`${api_endpoint}/api/users/login?`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(form)
+        })
+    }catch(e){
+        throw new Error(e)
+    }
     setIsSubmitting(false)
 }
