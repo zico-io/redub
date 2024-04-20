@@ -19,7 +19,7 @@ export default function App() {
           />
 
           <CustomButton
-            title='Continue with email.'
+            title='Continue with email'
             handlePress={() => router.push('/sign-up')}
             containerStyles='w-full mt-7'
           />

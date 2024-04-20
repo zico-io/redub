@@ -1,8 +1,8 @@
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, Alert } from 'react-native'
 import { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { Link } from 'expo-router'
+import { Link, router } from 'expo-router'
 
 import { images } from '../../constants'
 import FormField from '../../components/FormField'
@@ -18,8 +18,21 @@ const SignIn = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const submit = () => {
-    login(form, setIsSubmitting)
+  const submit = async () => {
+    if(!form.email || !form.password) {
+      Alert.alert('Error', 'Please fill in all fields.')
+    }
+
+    setIsSubmitting(true)
+    
+    try {
+      const result = await login(form);
+      router.replace('/home')
+    }catch(e) {
+      Alert.alert('Error', e.message)
+    }finally{
+      setIsSubmitting(false)
+    }
   }
 
   return (
