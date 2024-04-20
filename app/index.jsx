@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, View, ScrollView, Image } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import { Redirect, Router, router } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 import { images } from '../constants';
 import CustomButton from '../components/CustomButton';
@@ -9,7 +10,7 @@ import CustomButton from '../components/CustomButton';
 export default function App() {
   return (
     <SafeAreaView className='bg-primary h-full'>
-      <ScrollView contentContainerStyle={{ height: '100%'}}>
+      <KeyboardAwareScrollView contentContainerStyle={{ height: '100%'}}>
         <View className='w-full justify-center items-center min-h-[85vh] px-4'>
           <Image 
             source={images.logo} 
@@ -18,18 +19,12 @@ export default function App() {
           />
 
           <CustomButton
-            title='Create Account'
+            title='Continue with email.'
             handlePress={() => router.push('/sign-up')}
             containerStyles='w-full mt-7'
           />
-          <CustomButton
-            title='Sign In'
-            handlePress={() => router.push('/sign-in')}
-            containerStyles='w-[284px] mt-7 bg-secondary'
-            textStyles='text-action'
-          />
         </View>
-      </ScrollView>
+      </KeyboardAwareScrollView>
 
       <StatusBar backgroundColor='#000'
       style='light' />

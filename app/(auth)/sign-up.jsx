@@ -1,6 +1,7 @@
-import { View, Text, ScrollView, Image } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { Link } from 'expo-router'
 
 import { images } from '../../constants'
@@ -23,7 +24,7 @@ const SignUp = () => {
 
   return (
     <SafeAreaView className='bg-primary h-full'>
-      <ScrollView>
+      <KeyboardAwareScrollView>
         <View className='w-full justify-center min-h-[85vh] px-4 my-6'>
           <Image source={images.logo} resizeMode='contain' className='w-[115px] h-[35px]' />
           <Text className='text-2xl text-white text-semibold mt-10 font-sfsemibold'>Sign up for Redub</Text>
@@ -48,7 +49,7 @@ const SignUp = () => {
           />
 
           <CustomButton 
-            title='Sign In'
+            title='Sign Up'
             handlePress={submit}
             containerStyles='mt-7'
             isLoading={isSubmitting}
@@ -60,7 +61,7 @@ const SignUp = () => {
           </View>
 
         </View>
-      </ScrollView>
+      </KeyboardAwareScrollView>
     </SafeAreaView>
   )
 }
